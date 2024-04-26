@@ -62,10 +62,6 @@ function createMealCard(meal) {
     mealId.textContent = "Meal ID: " + meal.idMeal;
     contentDiv.appendChild(mealId);
 
-    // var mealTitle = document.createElement("h1");
-    // mealTitle.textContent = "Meal Title: " + meal.strMeal;
-    // contentDiv.appendChild(mealTitle);
-
     var mealName = document.createElement("h1");
     mealName.textContent = "Meal Name: " + meal.strMeal;
     contentDiv.appendChild(mealName);
