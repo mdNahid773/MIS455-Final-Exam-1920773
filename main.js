@@ -46,3 +46,35 @@ function display(items) {
 
     document.getElementById("mainImage").style.visibility = "hidden";
 }
+
+function createMealCard(meal) {
+    var cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+
+    var image = document.createElement("img");
+    image.src = meal.strMealThumb;
+    cardDiv.appendChild(image);
+
+    var contentDiv = document.createElement("div");
+    contentDiv.classList.add("card-content");
+
+    var mealId = document.createElement("h1");
+    mealId.textContent = "Meal ID: " + meal.idMeal;
+    contentDiv.appendChild(mealId);
+
+    // var mealTitle = document.createElement("h1");
+    // mealTitle.textContent = "Meal Title: " + meal.strMeal;
+    // contentDiv.appendChild(mealTitle);
+
+    var mealName = document.createElement("h1");
+    mealName.textContent = "Meal Name: " + meal.strMeal;
+    contentDiv.appendChild(mealName);
+
+    var cookingInstructions = document.createElement("p");
+    cookingInstructions.textContent = "Instructions: " + meal.strInstructions;
+    contentDiv.appendChild(cookingInstructions);
+
+    cardDiv.appendChild(contentDiv);
+
+    return cardDiv;
+}
